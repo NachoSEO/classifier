@@ -1,0 +1,10 @@
+{
+  "name": "classifier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nacho Mascort <nacho.mascort@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "classifier": "node ./src/index.js"
+  }
+}
