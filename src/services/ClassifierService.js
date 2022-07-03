@@ -20,14 +20,13 @@ class ClassifierService {
   }
 
   _classify(seedKeywords, keywordList) {
-    debugger;
     const seedKeywordsSortedByLength = this._removeDuplicateElements(this._sortByLength(seedKeywords));
 
     return keywordList.map(keyword => {
       let keywordClassified = false;
 
       return seedKeywordsSortedByLength.map(seedKeyword => {
-        if(keyword.includes(seedKeyword) && !keywordClassified) {
+        if(` ${keyword} `.includes(` ${seedKeyword} `) && !keywordClassified) {
           keywordClassified = true;
 
           return `${seedKeyword},${keyword}`;
